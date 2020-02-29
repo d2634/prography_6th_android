@@ -1,0 +1,2 @@
+include ':app'
+rootProject.name='Prography_6th_android_application'

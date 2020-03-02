@@ -23,6 +23,7 @@ public class movielist_recyclerAdapter extends RecyclerView.Adapter<movielist_re
     private Context context;
     private SparseBooleanArray selectedItems = new SparseBooleanArray();
     private ItemViewHolder holder;
+    private  View view;
     private int position;
 
     public movielist_recyclerAdapter(Context context, List<movies> list){
@@ -35,7 +36,7 @@ public class movielist_recyclerAdapter extends RecyclerView.Adapter<movielist_re
     @Override
     public movielist_recyclerAdapter.ItemViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         context = parent.getContext();
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.movie_list, parent, false);
+        view = LayoutInflater.from(parent.getContext()).inflate(R.layout.movie_list, parent, false);
         return new ItemViewHolder(view);
     }
 
@@ -78,24 +79,34 @@ public class movielist_recyclerAdapter extends RecyclerView.Adapter<movielist_re
         void onBind(final movies _data, int position) {
             this.data = _data;
             this.position = position;
-            String title = _data.getName();
-            String director = _data.getDirector();
-            String release = data.getRelease_date();
+            final String title = data.getName();
+            final String director = data.getDirector();
+            final String release = data.getRelease_date();
             String num=Integer.toString(position+1);
+            final String producer=data.getProducer();
+            final String rt_score=data.getRt_score();
+            final String description=data.getDescription();
             textView0.setText(num+". ");
             textView1.setText(title);
             textView2.setText(director);
             textView3.setText(release);
 
 
-            /*url.setOnClickListener(new View.OnClickListener() {
+            view.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(_data.getUrl()));
+                    Intent intent = new Intent(context.getApplicationContext(), movie_detail.class);
+                    intent.putExtra("title",title);
+                    intent.putExtra("director",director);
+                    intent.putExtra("producer",producer);
+                    intent.putExtra("release",release);
+                    intent.putExtra("rt_score",rt_score);
+                    intent.putExtra("description",description);
                     context.startActivity(intent);
+
                 }
             });
-        }*/
+
         }
     }
 }

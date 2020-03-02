@@ -58,12 +58,6 @@ public class FragmentOne extends Fragment {
                 try{
                     movie = response.body();
 
-                    /*for(int i = 0; i<20; i++){
-                        test = movie.get(i).getName();
-                        String test2=movie.get(i).getDirector();
-                        Log.d("Retrofit", "TestCode : "+ test.toString());
-                        Log.d("Retrofit", "TestCode : "+ test2.toString());  }*/
-
                         RecyclerView mRecyclerView = view.findViewById(R.id.recycler_view1);
                         RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(getContext());
                         mRecyclerView.setLayoutManager(mLayoutManager);

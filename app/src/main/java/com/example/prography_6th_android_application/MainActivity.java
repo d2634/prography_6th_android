@@ -1,11 +1,15 @@
 package com.example.prography_6th_android_application;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.PagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 
 import android.content.Context;
+import android.graphics.Color;
+import android.graphics.Typeface;
 import android.os.Bundle;
+import android.view.View;
 
 import com.google.android.material.tabs.TabItem;
 import com.google.android.material.tabs.TabLayout;
@@ -34,6 +38,11 @@ public class MainActivity extends AppCompatActivity {
         tab3 = findViewById(R.id.Tab3);
         viewPager = findViewById(R.id.viewpager);
 
+        tablayout.setTabTextColors(Color.parseColor("#E8E039"), Color.parseColor("#E8E039"));
+
+
+        
+
         pagerAdapter = new PageAdapter(getSupportFragmentManager(), tablayout.getTabCount());
         viewPager.setAdapter(pagerAdapter);
 
@@ -56,4 +65,5 @@ public class MainActivity extends AppCompatActivity {
         });
         viewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tablayout));
     }
+
 }

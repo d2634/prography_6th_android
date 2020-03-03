@@ -6,6 +6,8 @@
     android:layout_marginTop="7dp"
     android:layout_marginLeft="5dp"
     android:layout_marginRight="5dp"
+    android:background="@drawable/text_background"
+
     >
 
 <LinearLayout
@@ -16,22 +18,26 @@
     android:layout_marginBottom="10dp"
     android:orientation="vertical"
     android:layout_marginLeft="20dp"
+
     >
     <LinearLayout
         android:layout_width="260dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center_vertical"
         android:orientation="horizontal"
+
         >
     <TextView
         android:id="@+id/num"
        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:includeFontPadding="false"
-        android:textColor="#005000"
+        android:textColor="#1F2539"
         android:layout_marginTop="10dp"
+        android:fontFamily="@font/nanumbarunpenb"
         android:text="num"
         android:textSize="20dp"
+
         android:lineSpacingExtra="4dp"
         />
         <TextView
@@ -39,10 +45,11 @@
             android:layout_width="260dp"
             android:layout_height="wrap_content"
             android:includeFontPadding="false"
-            android:textColor="#005000"
+            android:textColor="#1F2539"
             android:layout_marginTop="10dp"
             android:text="title"
             android:textSize="20dp"
+            android:fontFamily="@font/nanumbarunpenb"
             android:lineSpacingExtra="4dp"
             />
     </LinearLayout>
@@ -54,9 +61,10 @@
         android:layout_marginTop="5dp"
         android:layout_marginBottom="5dp"
         android:layout_marginLeft="3dp"
-        android:textColor="#005000"
+        android:textColor="#1F2539"
         android:text="director"
         android:textSize="12dp"
+        android:fontFamily="@font/nanumbarunpenb"
         android:lineSpacingExtra="4dp"
         />
     <TextView
@@ -67,9 +75,10 @@
         android:layout_marginTop="5dp"
         android:layout_marginBottom="5dp"
         android:layout_marginLeft="3dp"
-        android:textColor="#005000"
+        android:textColor="#1F2539"
         android:text="release"
         android:textSize="12dp"
+        android:fontFamily="@font/nanumbarunpenb"
         android:lineSpacingExtra="4dp"
         />
         </LinearLayout>

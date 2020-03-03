@@ -17,6 +17,7 @@
             android:id="@+id/viewpager"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:background="#EBE6A8"
             android:layout_weight="1">
         </androidx.viewpager.widget.ViewPager>
 
@@ -24,7 +25,8 @@
             android:id="@+id/tablayout"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="#5560AE"
+            android:background="#1F2539"
+            app:tabTextAppearance="@style/tab_text"
             android:layout_weight="10">
 
             <com.google.android.material.tabs.TabItem

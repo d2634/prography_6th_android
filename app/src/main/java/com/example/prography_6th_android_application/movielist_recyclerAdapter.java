@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Build;
+import android.util.Log;
 import android.util.SparseBooleanArray;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -45,6 +46,7 @@ public class movielist_recyclerAdapter extends RecyclerView.Adapter<movielist_re
     @Override
     public void onBindViewHolder(@NonNull movielist_recyclerAdapter.ItemViewHolder holder, int position) {
         holder.onBind(listData.get(position),position);
+
     }
 
     @Override
@@ -73,10 +75,27 @@ public class movielist_recyclerAdapter extends RecyclerView.Adapter<movielist_re
             textView1 = itemView.findViewById(R.id.title);
             textView2 = itemView.findViewById(R.id.director);
             textView3 = itemView.findViewById(R.id.release);
+
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    int pos = getAdapterPosition() ;
+                    Intent intent = new Intent(context.getApplicationContext(), movie_detail.class);
+                    intent.putExtra("title",listData.get(pos).getName());
+                    intent.putExtra("director",listData.get(pos).getDirector());
+                    intent.putExtra("producer",listData.get(pos).getProducer());
+                    intent.putExtra("release",listData.get(pos).getRelease_date());
+                    intent.putExtra("rt_score",listData.get(pos).getRt_score());
+                    intent.putExtra("description",listData.get(pos).getDescription());
+                    Log.d("position",Integer.toString(pos));
+                    context.startActivity(intent);
+
+                }
+            });
         }
 
         @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN)
-        void onBind(final movies _data, int position) {
+        void onBind(final movies _data, final int position) {
             this.data = _data;
             this.position = position;
             final String title = data.getName();
@@ -90,22 +109,6 @@ public class movielist_recyclerAdapter extends RecyclerView.Adapter<movielist_re
             textView1.setText(title);
             textView2.setText("director: "+director);
             textView3.setText("release date: "+release);
-
-
-            view.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    Intent intent = new Intent(context.getApplicationContext(), movie_detail.class);
-                    intent.putExtra("title",title);
-                    intent.putExtra("director",director);
-                    intent.putExtra("producer",producer);
-                    intent.putExtra("release",release);
-                    intent.putExtra("rt_score",rt_score);
-                    intent.putExtra("description",description);
-                    context.startActivity(intent);
-
-                }
-            });
 
         }
     }

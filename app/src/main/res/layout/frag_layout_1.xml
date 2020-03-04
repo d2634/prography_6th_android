@@ -22,6 +22,7 @@
             android:layout_marginRight="5dp"
             android:gravity="center_vertical"
             android:fontFamily="@font/nanumbarunpenb"
+            android:textColor="#1F2539"
             android:textSize="32dp"
             android:text="MOVIE LIST"/>
         <ImageView

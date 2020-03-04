@@ -7,7 +7,6 @@
     android:layout_marginLeft="5dp"
     android:layout_marginRight="5dp"
     android:background="@drawable/text_background"
-
     >
 
 <LinearLayout
@@ -59,12 +58,11 @@
         android:layout_height="wrap_content"
         android:includeFontPadding="false"
         android:layout_marginTop="5dp"
-        android:layout_marginBottom="5dp"
         android:layout_marginLeft="3dp"
         android:textColor="#1F2539"
         android:text="director"
-        android:textSize="12dp"
-        android:fontFamily="@font/nanumbarunpenb"
+        android:textSize="15dp"
+        android:fontFamily="@font/nanumbarunpenr"
         android:lineSpacingExtra="4dp"
         />
     <TextView
@@ -77,8 +75,8 @@
         android:layout_marginLeft="3dp"
         android:textColor="#1F2539"
         android:text="release"
-        android:textSize="12dp"
-        android:fontFamily="@font/nanumbarunpenb"
+        android:textSize="15dp"
+        android:fontFamily="@font/nanumbarunpenr"
         android:lineSpacingExtra="4dp"
         />
         </LinearLayout>

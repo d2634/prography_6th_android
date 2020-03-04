@@ -1,83 +1,169 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:orientation="vertical" android:layout_width="340dp"
+    android:layout_gravity="center"
+    android:layout_height="wrap_content">
 
     <LinearLayout
-        android:layout_width="match_parent"
+        android:layout_width="340dp"
         android:layout_height="match_parent"
         android:layout_gravity="center"
-        android:layout_marginTop="10dp"
-        android:layout_marginBottom="10dp"
         android:orientation="vertical"
-        android:layout_marginLeft="20dp"
         >
 
             <TextView
                 android:id="@+id/title"
-                android:layout_width="260dp"
+                android:layout_width="340dp"
                 android:layout_height="wrap_content"
-                android:includeFontPadding="false"
-                android:textColor="#005000"
-                android:layout_marginTop="10dp"
+                android:textColor="#E8E039"
+                android:paddingTop="5dp"
+               android:paddingBottom="5dp"
                 android:text="title"
-                android:textSize="20dp"
+                android:textSize="22dp"
                 android:lineSpacingExtra="4dp"
+                android:gravity="center"
+                android:fontFamily="@font/nanumbarunpenb"
+                android:background="@drawable/detail_background_top"
                 />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:orientation="vertical"
+            android:background="@drawable/detail_background_mid"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:orientation="horizontal"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                >
+                <ImageView
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:layout_marginTop="7dp"
+                    android:src="@drawable/cheese"/>
         <TextView
             android:id="@+id/director"
-            android:layout_width="260dp"
+            android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:includeFontPadding="false"
             android:layout_marginTop="5dp"
             android:layout_marginBottom="5dp"
             android:layout_marginLeft="3dp"
-            android:textColor="#005000"
+            android:textColor="#1F2539"
             android:text="director"
-            android:textSize="12dp"
+            android:textSize="16dp"
+            android:fontFamily="@font/nanumbarunpenr"
             android:lineSpacingExtra="4dp"
             />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:orientation="horizontal"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="1dp"
+                >
+                <ImageView
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/cheese"/>
         <TextView
             android:id="@+id/release"
-            android:layout_width="260dp"
+            android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:includeFontPadding="false"
-            android:layout_marginTop="5dp"
             android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp"
             android:layout_marginLeft="3dp"
-            android:textColor="#005000"
+            android:textColor="#1F2539"
             android:text="release"
-            android:textSize="12dp"
+            android:textSize="16dp"
+            android:fontFamily="@font/nanumbarunpenr"
             android:lineSpacingExtra="4dp"
             />
+            </LinearLayout>
 
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:orientation="horizontal"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="1dp"
+                >
+                <ImageView
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/cheese"/>
         <TextView
             android:id="@+id/rt_score"
-            android:layout_width="260dp"
+            android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:includeFontPadding="false"
             android:layout_marginTop="5dp"
             android:layout_marginBottom="5dp"
             android:layout_marginLeft="3dp"
-            android:textColor="#005000"
-            android:text="release"
-            android:textSize="12dp"
+            android:textColor="#1F2539"
+            android:text="rt_score"
+            android:textSize="16dp"
+            android:fontFamily="@font/nanumbarunpenr"
             android:lineSpacingExtra="4dp"
             />
-
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:orientation="horizontal"
+                android:layout_marginLeft="5dp"
+                android:layout_marginBottom="5dp"
+                >
+                <ImageView
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:layout_marginTop="7dp"
+                    android:src="@drawable/cheese"/>
         <TextView
             android:id="@+id/description"
-            android:layout_width="260dp"
+            android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:includeFontPadding="false"
             android:layout_marginTop="5dp"
             android:layout_marginBottom="5dp"
             android:layout_marginLeft="3dp"
-            android:textColor="#005000"
-            android:text="release"
-            android:textSize="12dp"
+            android:textColor="#1F2539"
+            android:text="description"
+            android:textSize="16dp"
+            android:fontFamily="@font/nanumbarunpenr"
             android:lineSpacingExtra="4dp"
             />
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/delete"
+            android:paddingBottom="8dp"
+            android:paddingTop="8dp"
+            android:layout_width="340dp"
+            android:layout_height="wrap_content"
+            android:textColor="#E8E039"
+            android:text="닫기"
+            android:textSize="12dp"
+            android:lineSpacingExtra="4dp"
+            android:gravity="center"
+            android:fontFamily="@font/nanumbarunpenb"
+            android:background="@drawable/detail_background_bottom"
+            />
+
     </LinearLayout>
 
 </LinearLayout>

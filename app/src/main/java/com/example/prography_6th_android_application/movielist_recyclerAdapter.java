@@ -88,8 +88,8 @@ public class movielist_recyclerAdapter extends RecyclerView.Adapter<movielist_re
             final String description=data.getDescription();
             textView0.setText(num+". ");
             textView1.setText(title);
-            textView2.setText(director);
-            textView3.setText(release);
+            textView2.setText("director: "+director);
+            textView3.setText("release date: "+release);
 
 
             view.setOnClickListener(new View.OnClickListener() {
